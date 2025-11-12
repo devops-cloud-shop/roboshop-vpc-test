@@ -4,22 +4,18 @@ terraform {
         source = "hashicorp/aws"
         version = "6.16.0"
     }
-
   }
-}
-
 #backend configuration
-
-backend "s3" {
+  backend "s3" {
     bucket = "remote-state-86s-bucket"
-    key    = "vpc-module"
+    key    = "vpc-module-test"
     region = "us-east-1"
     use_lockfile = true
     encrypt = true
+  }
 }
 
 #provider configuration
-
 provider "aws" {
     region = "us-east-1"
 }
