@@ -13,3 +13,11 @@ variable "environment" {
     type = string
     default = "dev"
 }
+
+variable "vpc_tags" {
+    type = map
+    default = {
+        Purpose = "vpc-module-test"
+        DontDelete = true
+    }
+}
